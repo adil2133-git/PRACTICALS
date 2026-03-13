@@ -6,8 +6,11 @@ function secondLargest(arr){
         if(arr[i] > largest){
             secLargest = largest
             largest = arr[i]
+        }else if(arr[i] > secLargest && arr[i] !== largest){
+            secLargest = arr[i]
         }
     }
     return secLargest
 }
 console.log(secondLargest([3,8,6,9,10]))
+console.log(secondLargest([3,8,2,4,1,2,5,3]))
